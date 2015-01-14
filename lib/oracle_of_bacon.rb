@@ -43,7 +43,7 @@ class OracleOfBacon
       Net::ProtocolError => e
       # convert all of these into a generic OracleOfBacon::NetworkError,
       #  but keep the original error message
-      raise OracleOfBacon::NetworkError
+      raise OracleOfBacon::NetworkError, e.message
     end
     @response = Response.new(xml)
 
