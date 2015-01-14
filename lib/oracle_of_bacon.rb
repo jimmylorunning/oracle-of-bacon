@@ -27,8 +27,8 @@ class OracleOfBacon
   end
 
   def initialize(api_key='')
-    @from = DEFAULT_FROM
-    @to = DEFAULT_TO
+    self.from = DEFAULT_FROM
+    self.to = DEFAULT_TO
     @api_key = api_key
   end
 
