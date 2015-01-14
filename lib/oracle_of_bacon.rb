@@ -73,7 +73,7 @@ class OracleOfBacon
         parse_graph_response
       elsif !@doc.xpath('/spellcheck').empty?
         parse_spellcheck_response
-      elsif !@doc.xpath('/other').empty?
+      else
         handle_unknown
       end
     end
@@ -97,7 +97,7 @@ class OracleOfBacon
 
     def handle_unknown
       @type = :unknown
-      @data = 'unknown response type'
+      @data = 'Unknown response type'
     end
 
   end
